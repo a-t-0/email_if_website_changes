@@ -122,7 +122,7 @@ def user_is_logged_in(hardcoded, website_controller, company):
             return False
 
 
-def gitlab_login(hardcoded,gitlab_pwd=None, gitlab_username=None):
+def gitlab_login(hardcoded, gitlab_pwd=None, gitlab_username=None):
     if gitlab_pwd is None:
         username, pswd = get_credentials(hardcoded)
     website_controller = login(

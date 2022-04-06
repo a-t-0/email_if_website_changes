@@ -43,11 +43,7 @@ class Github_personal_access_token_getter:
         # TODO: get gitlab-ci-build-statuses from argument parser
         # github_repo_name = "gitlab-ci-build-statuses"
 
-        
-
-        print(
-            f"Done"
-        )
+        print(f"Done")
 
     def login_github_for_personal_access_token(
         self, hardcoded, github_username, github_pwd
@@ -121,7 +117,8 @@ class Github_personal_access_token_getter:
         if not clicked:
             try:
                 click_element_by_xpath(
-                    website_controller, hardcoded.github_pac_repo_status_checkbox_xpathV1
+                    website_controller,
+                    hardcoded.github_pac_repo_status_checkbox_xpathV1,
                 )
             except:
                 pass
@@ -142,7 +139,8 @@ class Github_personal_access_token_getter:
         if not clicked:
             try:
                 click_element_by_xpath(
-                    website_controller, hardcoded.github_pac_generate_token_button_xpathV1
+                    website_controller,
+                    hardcoded.github_pac_generate_token_button_xpathV1,
                 )
                 clicked = True
             except:
