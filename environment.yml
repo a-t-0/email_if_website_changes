@@ -1,0 +1,24 @@
+# run: conda env create --file environment.yml
+# include new packages: conda env update --file environment.yml
+name: get_gitlab_generation_token
+channels:
+  - conda-forge
+  - conda
+dependencies:
+- anaconda
+- conda:
+  - numpy>=1.19
+  - pytest=6.1.2
+  - selenium
+  - scipy==1.1.0
+  - scikit-image
+  - pillow
+- pip
+- pip:
+  # works for regular pip packages
+  - testbook
+  - pyment
+  - pdoc3
+  - black
+  - vulture
+
